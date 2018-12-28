@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <include
+        android:id="@+id/toolBar_layout" layout="@layout/activity_tool_bar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBar_layout"
+        android:padding="10dp">
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/postTitle"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/et_postTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Post Title"
+            android:inputType="text"
+            android:maxLength="50"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/grey" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/postDescription"
+        android:layout_below="@+id/postTitle"
+        >
+
+        <EditText
+            android:id="@+id/et_postDescription"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Post Description"
+            android:inputType="text"
+            android:maxLength="400"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/grey" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/postCategory"
+        android:layout_below="@+id/postDescription"
+        >
+
+        <EditText
+            android:id="@+id/et_postCategory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Post Category"
+            android:drawableRight="@drawable/ic_apps_black_24dp"
+            android:inputType="text"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/grey" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:weightSum="100"
+        android:id="@+id/horizontal_layout1"
+        android:orientation="horizontal"
+        android:layout_below="@+id/postCategory"
+        >
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:layout_marginTop="20dp"
+            android:id="@+id/postBudget"
+            android:layout_below="@+id/postCategory"
+
+            >
+
+            <EditText
+                android:id="@+id/et_postBudget"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Budget"
+                android:inputType="text"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/grey" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/sp_currency"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            style="@style/spinner_style"
+            android:layout_marginTop="20dp"
+            android:spinnerMode="dropdown"
+            android:layout_weight="50"
+            android:drawSelectorOnTop="true"
+             />
+
+       <!-- <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="50"
+            android:id="@+id/postCurrency"
+            android:layout_below="@+id/postBudget"
+            >
+
+            <EditText
+                android:id="@+id/et_postCurrency"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Post Title"
+                android:inputType="text"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/grey" />
+        </android.support.design.widget.TextInputLayout>-->
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/horizontal_layout2"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:layout_below="@+id/horizontal_layout1"
+        >
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:layout_marginTop="20dp"
+            android:id="@+id/postRate"
+
+            >
+
+            <EditText
+                android:id="@+id/et_postRate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Rate"
+                android:inputType="text"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/grey" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="50"
+            android:id="@+id/postPaymentMethod"
+            >
+
+            <EditText
+                android:id="@+id/et_postPaymentMethod"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Payment Method"
+                android:inputType="text"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/grey" />
+        </android.support.design.widget.TextInputLayout>
+
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/postLocation"
+        android:layout_weight="50"
+        android:layout_below="@+id/horizontal_layout2">
+
+    <EditText
+        android:id="@+id/et_postLocation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Post Location"
+        android:inputType="textPostalAddress"
+        android:drawableRight="@drawable/ic_place_black_24dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/grey" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/horizontal_layout3"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:layout_below="@+id/postLocation"
+        >
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/postDate"
+        android:layout_weight="50"
+        android:layout_below="@+id/horizontal_layout2"
+        >
+
+        <EditText
+            android:id="@+id/et_postDate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Start Date"
+            android:inputType="date"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/grey" />
+    </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/postJobTerm"
+            android:layout_weight="50"
+            android:layout_below="@+id/horizontal_layout2"
+            >
+
+            <EditText
+                android:id="@+id/et_postJobTerm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Job Term"
+                android:inputType="text"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/grey" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
